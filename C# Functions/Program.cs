@@ -5,7 +5,7 @@ var keepGoing = true;
 static (bool, int) IsPalindrome(string input)
 {
     var isPalindrome = false;
-    var notAllowedChars = new string[] { " ", ",", "'", "?", "!" };
+    var notAllowedChars = new string[] { " ", ",", "'", "?", "!","." };
 
     var stringBuilder = new StringBuilder(input);
 
