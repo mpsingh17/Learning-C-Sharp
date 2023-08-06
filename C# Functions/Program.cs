@@ -5,21 +5,26 @@ var keepGoing = true;
 static (bool, int) IsPalindrome(string input)
 {
     var isPalindrome = false;
-    var notAllowedChars = new string[] { " ", ",", "'", "?", "!","." };
 
-    var stringBuilder = new StringBuilder(input);
+    var stringBuilder = new StringBuilder();
 
-    foreach (var item in notAllowedChars)
-        stringBuilder.Replace(item, "");
+    // Iterate over all chars of user input adn ignore the whitespaces and punctuations.
+    foreach (var item in input)
+    {
+        if (!char.IsPunctuation(item) && !char.IsWhiteSpace(item))
+            stringBuilder.Append(item);
+    }
 
     var cleanedUserInput = stringBuilder.ToString();
+    //Console.WriteLine($"Cleaned user input => {cleanedUserInput}");
 
     var reversedCleanUserInput = string.Concat(cleanedUserInput.Reverse());
+    //Console.WriteLine($"Reversed user input => {reversedCleanUserInput}");
 
     if (cleanedUserInput.Equals(reversedCleanUserInput))
         isPalindrome = true;
 
-    return (isPalindrome, cleanedUserInput.Length);
+    return (isPalindrome, input.Length);
 }
 
 do
