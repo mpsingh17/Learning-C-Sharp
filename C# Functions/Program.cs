@@ -7,23 +7,19 @@ static (bool, int) IsPalindrome(string input)
     var isPalindrome = false;
     var notAllowedChars = new string[] { " ", ",", "'", "?", "!" };
 
-    var stringToReturn = new StringBuilder(input);
+    var stringBuilder = new StringBuilder(input);
 
     foreach (var item in notAllowedChars)
-    {
-        stringToReturn.Replace(item, "");
-    }
+        stringBuilder.Replace(item, "");
 
-    var cleanedUserInput = stringToReturn.ToString();
-    // Console.WriteLine($"Cleaned user input=> {cleanedUserInput}");
+    var cleanedUserInput = stringBuilder.ToString();
 
     var reversedCleanUserInput = string.Concat(cleanedUserInput.Reverse());
-    // Console.WriteLine($"Reversed user input=> {reversedCleanUserInput}");
 
     if (cleanedUserInput.Equals(reversedCleanUserInput))
         isPalindrome = true;
 
-    return (isPalindrome, isPalindrome ? cleanedUserInput.Length : 0);
+    return (isPalindrome, cleanedUserInput.Length);
 }
 
 do
@@ -32,6 +28,15 @@ do
     
     var userInput = Console.ReadLine();
 
+    // If user entered exit, close the program.
+    if (userInput == "exit")
+    {
+        keepGoing = false;
+        Console.WriteLine("Thank you for your time. See you next time :)");
+
+        continue;
+    }
+
     if (userInput != null)
     {
         (bool isPalindrome, int length) = IsPalindrome(userInput.ToLower());
@@ -39,15 +44,11 @@ do
         if (isPalindrome)
             Console.WriteLine($"It's a palindrome with length = {length}");
         else
-            Console.WriteLine("Not a palindrome");
+            Console.WriteLine($"Not a palindrome. Length of entered text is {length}");
 
     }
     else
         Console.WriteLine("Please enter a text value");
-
-    if (userInput == "exit")
-        keepGoing = false;
-
 
 } while (keepGoing);
 
