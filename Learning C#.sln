@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C# Strings", "C# Basics\C# Strings.csproj", "{2A35D9C4-AD27-4CDE-8015-236006D26998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# Functions", "C# Functions\C# Functions.csproj", "{B2D357FB-A983-401A-95AD-6226D92E3F12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C# Functions", "C# Functions\C# Functions.csproj", "{B2D357FB-A983-401A-95AD-6226D92E3F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes, Structs, and Records", "Classes, Structs, and Records\Classes, Structs, and Records.csproj", "{30FE74EA-6A94-4EBE-B907-060DBE3119B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B2D357FB-A983-401A-95AD-6226D92E3F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2D357FB-A983-401A-95AD-6226D92E3F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2D357FB-A983-401A-95AD-6226D92E3F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FE74EA-6A94-4EBE-B907-060DBE3119B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FE74EA-6A94-4EBE-B907-060DBE3119B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FE74EA-6A94-4EBE-B907-060DBE3119B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FE74EA-6A94-4EBE-B907-060DBE3119B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
