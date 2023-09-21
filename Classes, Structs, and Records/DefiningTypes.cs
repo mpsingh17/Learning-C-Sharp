@@ -20,6 +20,12 @@ namespace Classes__Structs__and_Records
     // class - reference types.
     public class Employee : IPerson
     {
+        public Employee(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         
@@ -36,6 +42,10 @@ namespace Classes__Structs__and_Records
 
     public class Manager : Employee, IPerson
     {
+        public Manager(string firstName, string lastName) : base(firstName, lastName)
+        {
+        }
+
         public int NumberOfDirectReports { get; set; }
 
     }
