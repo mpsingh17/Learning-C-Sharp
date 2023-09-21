@@ -20,10 +20,11 @@ namespace Classes__Structs__and_Records
     // class - reference types.
     public class Employee : IPerson
     {
-        public Employee(string firstName, string lastName)
+        public Employee(string firstName, string lastName, int empId = 0)
         {
             FirstName = firstName;
             LastName = lastName;
+            Id = empId;
         }
 
         public string FirstName { get; set; }
