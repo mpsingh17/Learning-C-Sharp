@@ -20,11 +20,13 @@ namespace Classes__Structs__and_Records
     // class - reference types.
     public class Employee : IPerson
     {
+        public Employee() {}
+
         public Employee(string firstName, string lastName, int empId = 0)
         {
             FirstName = firstName;
             LastName = lastName;
-            Id = empId;
+            EmployeeId = empId;
         }
 
         public string FirstName { get; set; }
@@ -56,6 +58,12 @@ namespace Classes__Structs__and_Records
     // structs can't have base classes. 
     public struct Age
     {
+        public Age(DateTime dob, int yearsOld)
+        {
+            BirthDate = dob;
+            YearsOld = yearsOld;
+        }
+
         public DateTime BirthDate { get; set; }
         public int YearsOld { get; set; }
     }
